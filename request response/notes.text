@@ -1,0 +1,4 @@
+A POST req is a way to send data to server.
+GET: to retrieve data
+POST: to send data 
+PUT: to update data
