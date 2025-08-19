@@ -18,9 +18,11 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      {showbtn?<button>I will be shown only when second button is clicked</button> : "thenga"}
+      {/* {showbtn?<button>I will be shown only when second button is clicked</button> : "thenga"} */}
+
+      {showbtn && <button>I will be shown only when second button is clicked</button>}
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => setshowbtn((!showbtn))}>
           count is {count}
         </button>
         <p>
