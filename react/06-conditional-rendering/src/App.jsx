@@ -1,17 +1,11 @@
-import { useEffect, useState, useRef, use } from 'react'
+import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const a = useRef(0)
-
-
-  useEffect(() => {
-    a.current = a.current + 1
-    console.log(`rerendering and the value of a is ${a.current}...`)
-  })
+  const [showbtn, setshowbtn] = useState(false)
 
   return (
     <>
@@ -24,6 +18,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      {showbtn?<button>I will be shown only when second button is clicked</button> : "thenga"}
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
